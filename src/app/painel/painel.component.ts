@@ -16,6 +16,8 @@ export class PainelComponent implements OnInit {
   public rodada: number = 0;
   public rodadaFrase: Frase;
 
+  public progresso: number = 0;
+
 
   constructor() {
     this.rodadaFrase = this.frases[this.rodada]
@@ -38,6 +40,9 @@ export class PainelComponent implements OnInit {
 
       // Trocar pergunta da rodada
       this.rodada++;
+
+      // Incrementa o percentual do progresso conforme o tamanho do vetor de frases
+      this.progresso = this.progresso + (100 / this.frases.length);
 
       // Atualiza o objeto da rodada
       this.rodadaFrase = this.frases[this.rodada]
