@@ -1,3 +1,8 @@
+<!---
 <img [src]="coracaoVazio" />
 <img [src]="coracaoVazio" />
 <img [src]="coracaoCheio" />
+-->
+
+<!-- Diretiva de loop no array coracoes fazendo um property bind no atributo src -->
+<img *ngFor="let coracao of coracoes" [src]="coracao.exibeCoracao()" />
