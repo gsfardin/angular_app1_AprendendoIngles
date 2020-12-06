@@ -24,7 +24,11 @@ export class PainelComponent implements OnInit {
   public atualizaResposta(resposta: Event): void {
     // <HTMLInputElement> Declara que o atributo é um elemento HTML, permite buscar o estado do elemento no DOM.
     this.resposta = (<HTMLInputElement>resposta.target).value
-    console.log(this.resposta)
+    //console.log(this.resposta)
+  }
+
+  public verificarResposta(): void {
+    console.log('Verificar resposta:', this.resposta);
   }
 
 }
