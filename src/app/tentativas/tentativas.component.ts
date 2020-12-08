@@ -21,6 +21,14 @@ export class TentativasComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(): void {
+    // this.tentativas
+    // this.coracoes.length
+    if(this.tentativas !== this.coracoes.length) {
+      let indice = this.coracoes.length - this.tentativas;
+
+      // Altera o atributo cheio do ogjeto coração no indice definido pelas tentativas para começar pelo 0
+      this.coracoes[indice - 1].cheio = false;
+    }
     console.log('Numero de tentativas: ', this.tentativas)
   }
 
