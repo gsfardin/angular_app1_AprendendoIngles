@@ -17,7 +17,6 @@ export class TentativasComponent implements OnInit, OnChanges {
   ]
 
   constructor() {
-    console.log(this.coracoes)
   }
 
   ngOnChanges(): void {
@@ -29,7 +28,6 @@ export class TentativasComponent implements OnInit, OnChanges {
       // Altera o atributo cheio do ogjeto coração no indice definido pelas tentativas para começar pelo 0
       this.coracoes[indice - 1].cheio = false;
     }
-    console.log('Numero de tentativas: ', this.tentativas)
   }
 
   ngOnInit(): void {

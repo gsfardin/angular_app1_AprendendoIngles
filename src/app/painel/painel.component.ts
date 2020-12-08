@@ -27,7 +27,7 @@ export class PainelComponent implements OnInit, OnDestroy {
    }
 
   ngOnDestroy(): void {
-    console.log('Componente painel foi destruido');
+
   }
 
   ngOnInit(): void {
@@ -37,7 +37,6 @@ export class PainelComponent implements OnInit, OnDestroy {
   public atualizaResposta(resposta: Event): void {
     // <HTMLInputElement> Declara que o atributo é um elemento HTML, permite buscar o estado do elemento no DOM.
     this.resposta = (<HTMLInputElement>resposta.target).value
-    //console.log(this.resposta)
   }
 
   public verificarResposta(): void {
